@@ -1,0 +1,24 @@
+body{
+    width: 1000px;
+    margin: 20px auto;
+    font-family: Arial, Helvetica, Tahoma, Verdana, Sans-Serif;
+}
+
+article{
+    padding: 10px;
+    text-align: justify;
+    text-indent: 20px;
+    color: #3b3b3a;
+}
+
+h1{
+    color: #d90004;
+    font-family: "Times New Roman";
+    text-align: center;
+}
+
+h2{
+    color: #40c3d9;
+    text-indent: 50px;
+}
+
