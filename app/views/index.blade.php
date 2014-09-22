@@ -8,7 +8,7 @@
                 <article>
                     <h2>{{ $project->project_name_ru}}</h2>
                     <p>{{ Str::limit($project->project_text_ru, 350) }}</p>
-                    <a href='#'>Читать далее...</a>
+                    <a href='{{URL::to('project', $project->project_alias)}}'>Читать далее...</a>
                 </article>
                 @endforeach
 
@@ -17,7 +17,7 @@
                 <article>
                     <h2>{{ $project->project_name_en}}</h2>
                     <p>{{ Str::limit($project->project_text_en, 350) }}</p>
-                    <a href='#'>Читать далее...</a>
+                    <a href='{{URL::to('project', $project->project_alias)}}'>Read more...</a>
                 </article>
                 @endforeach
 
@@ -26,11 +26,11 @@
                 <article>
                     <h2>{{ $project->project_name_ua}}</h2>
                     <p>{{ Str::limit($project->project_text_ua, 350) }}</p>
-                    <a href='#'>Читать далее...</a>
+                    <a href='{{URL::to('project', $project->project_alias)}}'>Читати далi...</a>
                 </article>
                 @endforeach
             @endif
 
             <?php echo $projects->links(); ?>
         @endif
-@stop
+    @stop

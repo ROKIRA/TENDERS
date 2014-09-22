@@ -12,6 +12,11 @@
     ]);
 
 
+    Route::get('project/{project}',[
+        'as' => 'project',
+        'uses' => 'HomeController@getProject'
+    ]);
+
     Route::any('hello', function()
     {
         return View::make('hello');

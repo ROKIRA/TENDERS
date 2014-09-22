@@ -14,6 +14,7 @@ class CreateProjectsTable extends Migration {
 	{
 		Schema::create('projects', function($table){
             $table->increments('project_id');
+            $table->string('project_alias', 255);
             $table->string('project_keywords_ru', 200);
             $table->string('project_keywords_en', 200);
             $table->string('project_keywords_ua', 200);
