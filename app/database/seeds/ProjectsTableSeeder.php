@@ -15,6 +15,7 @@ class ProjectsTableSeeder extends Seeder{
 
         for($i=1; $i<=50; $i++){
             $testdata = array(
+                'project_alias' => "project_name_$i",
                 'project_keywords_ru' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tellus at velit pretium tincidunt.',
                 'project_keywords_en' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tellus at velit pretium tincidunt.',
                 'project_keywords_ua' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tellus at velit pretium tincidunt.',

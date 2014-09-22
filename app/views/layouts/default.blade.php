@@ -1,3 +1,5 @@
 @include('layouts.header')
+    @yield('leftbar')
     @yield('content')
+    @yield('rightbar')
 @include('layouts.footer')
