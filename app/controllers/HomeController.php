@@ -1,6 +1,14 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+App::error(function (ModelNotFoundException $e) {
+    return View::make('error404');
+});
+
+
 class HomeController extends BaseController {
+
+
 
     /* GET ALL PROJECTS */
     public function index()
@@ -19,7 +27,9 @@ class HomeController extends BaseController {
     public function getProject($alias){
         $lang = Cookie::get('lang', 'ru');
 
-        $project = DB::table('projects')->where('project_alias', $alias)->first();
+        $project = Project::where('project_alias', $alias)->firstOrFail();
+
+
 
         return View::make('project')->with(array('project' => $project, 'lang' => $lang));
     }

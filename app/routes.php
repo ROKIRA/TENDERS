@@ -21,3 +21,7 @@
     {
         return View::make('hello');
     });
+
+    App::missing(function ($exception) {
+        return View::make('error404');
+    });
