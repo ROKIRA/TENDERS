@@ -17,6 +17,7 @@
                 <article>
                     <h2>{{ $project->project_name_en}}</h2>
                     <p>{{ Str::limit($project->project_text_en, 350) }}</p>
+
                     <a href='{{URL::to('project', $project->project_alias)}}'>Read more...</a>
                 </article>
                 @endforeach
@@ -26,6 +27,7 @@
                 <article>
                     <h2>{{ $project->project_name_ua}}</h2>
                     <p>{{ Str::limit($project->project_text_ua, 350) }}</p>
+
                     <a href='{{URL::to('project', $project->project_alias)}}'>Читати далi...</a>
                 </article>
                 @endforeach
