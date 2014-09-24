@@ -1,6 +1,6 @@
 body{
     /*width: 1000px;*/
-    margin: 20px auto;
+    /*margin: 20px auto;*/
     font-family: Arial, Helvetica, Tahoma, Verdana, Sans-Serif;
 }
 
@@ -23,9 +23,42 @@ h2{
 }
 
 /*--------------------------------mystyle*/
-.row div{
+.row .header{
     height: 300px;
-    background: #333;
-    border-left: 1px solid #009926;
+    padding-top: 10px;
 }
 
+.header .col-lg-1 img{
+    width: 160px;
+}
+.header .col-lg-6{
+    padding: 0 0 0 20px;
+}
+.header .col-lg-6 h1{
+    color: #000080;
+    font-style: italic;
+}
+.header .col-lg-6 address{
+    font-size: 26px;
+    width: 300px;
+}
+.header .col-lg-4{
+    font-size: 24px;
+    width: 300px;
+}
+.header .col-lg-11{
+    padding: 0 0 0 35px;
+}
+.header .col-lg-2 .btn{
+    background: #417E9E;
+}
+.header .col-lg-2 .btn:hover{
+    background: #40c3d9;
+}
+.header .col-lg-2 a.btn{
+    color: #fff;
+    display: inline-block;
+}
+.header .col-lg-2 .lang{
+    display: inline-block;
+}
