@@ -28,6 +28,10 @@
         return View::make('hello');
     });
 
+    Route::any('verstka', function()
+    {
+        return View::make('verstka');
+    });
 
 
     App::missing(function ($exception) {

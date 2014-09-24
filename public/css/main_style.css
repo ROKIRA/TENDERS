@@ -1,5 +1,5 @@
 body{
-    width: 1000px;
+    /*width: 1000px;*/
     margin: 20px auto;
     font-family: Arial, Helvetica, Tahoma, Verdana, Sans-Serif;
 }
@@ -20,5 +20,12 @@ h1{
 h2{
     color: #40c3d9;
     text-indent: 50px;
+}
+
+/*--------------------------------mystyle*/
+.row div{
+    height: 300px;
+    background: #333;
+    border-left: 1px solid #009926;
 }
 
