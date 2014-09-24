@@ -1,38 +1,35 @@
 @extends('layouts.default')
     @section('content')
-        <h1>TENDERS HOMEPAGE</h1>
-        @if($projects->count())
+        <section id="content">
+            <h1>TENDERS HOMEPAGE</h1>
 
-            @if($lang == 'ru')
-                @foreach($projects as $project)
-                <article>
-                    <h2>{{ $project->project_name_ru}}</h2>
-                    <p>{{ Str::limit($project->project_text_ru, 350) }}</p>
-                    <a href='{{URL::to('project', $project->project_alias)}}'>Читать далее...</a>
-                </article>
-                @endforeach
+            <div id="projects">
+                <div class="project_articles" id="project_articles">
+                    @include('layouts.projects')
+                </div>
 
-            @elseif($lang == 'en')
-                @foreach($projects as $project)
-                <article>
-                    <h2>{{ $project->project_name_en}}</h2>
-                    <p>{{ Str::limit($project->project_text_en, 350) }}</p>
+                @if($projects_count != 0)
+                    <button id="more_projects" data-url="{{ URL::to('download/more/projects') }}" data-load="{{base64_encode(3)}}" data-count="{{base64_encode($projects_count)}}">
+                           @if($lang == 'ru')
+                                @if($projects_count-3 >= 5)Показать ещё <span>5</span> проектов
+                                @else Показать оставшиеся <span>{{$projects_count-3}}</span> проектов
+                                @endif
+                           @elseif($lang == 'en')
+                                @if($projects_count-3 >= 5)Show <span>5</span> more projects
+                                @else Show last <span>{{$projects_count-3}}</span> projects
+                                @endif
+                           @elseif($lang == 'ua')
+                               @if($projects_count-3 >= 5)Показати ще <span>5</span> проектiв
+                               @else Показати станнi <span>{{$projects_count-3}}</span> проектiв
+                               @endif
+                           @endif
 
-                    <a href='{{URL::to('project', $project->project_alias)}}'>Read more...</a>
-                </article>
-                @endforeach
+                        </button>
+                    <?php // echo $projects->links(); ?>
+                @endif
+            </div>
 
-            @elseif($lang == 'ua')
-                @foreach($projects as $project)
-                <article>
-                    <h2>{{ $project->project_name_ua}}</h2>
-                    <p>{{ Str::limit($project->project_text_ua, 350) }}</p>
 
-                    <a href='{{URL::to('project', $project->project_alias)}}'>Читати далi...</a>
-                </article>
-                @endforeach
-            @endif
+        </section>
 
-            <?php echo $projects->links(); ?>
-        @endif
     @stop

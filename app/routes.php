@@ -17,10 +17,18 @@
         'uses' => 'HomeController@getProject'
     ]);
 
+    Route::post('download/more/projects', [
+        'as' => 'more_projects',
+        'uses' => 'HomeController@getMoreProjects'
+    ]);
+
+
     Route::any('hello', function()
     {
         return View::make('hello');
     });
+
+
 
     App::missing(function ($exception) {
         return View::make('error404');
