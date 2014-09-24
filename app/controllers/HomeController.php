@@ -61,7 +61,7 @@ class HomeController extends BaseController {
             'status' => 200,
             'load' => $loaded,
             'left' => $left,
-            'tpl' => $tpl
+            'tpl' => $tpl,
         ));
     }
 

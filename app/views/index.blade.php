@@ -1,6 +1,6 @@
 @extends('layouts.default')
     @section('content')
-        <section id="content">
+        <section id="content" style="width: 1000px; margin:0 auto">
             <h1>TENDERS HOMEPAGE</h1>
 
             <div id="projects">
