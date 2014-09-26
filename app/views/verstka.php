@@ -9,10 +9,10 @@
 
     <link media="all" type="text/css" rel="stylesheet" href="css/main_style.css">
 
+    <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/main_script.js"></script>
-    <script src="js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
 
@@ -41,28 +41,11 @@
                             </div>
                         </div>
 
-                        <div class="navbar">
-                            <div class="navbar-inner">
-                                <div class="container">
-
-                                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-                                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </a>
-
-                                    <!-- Be sure to leave the brand out there if you want it shown -->
-                                    <a class="brand" href="#">Project name</a>
-
-                                    <!-- Everything you want hidden at 940px or less, place within here -->
-                                    <div class="nav-collapse">
-                                        <!-- .nav, .navbar-search, .navbar-form, etc -->
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#">Главная</a></li>
+                            <li><a href="#">Профиль</a></li>
+                            <li><a href="#">Сообщение</a></li>
+                        </ul>
                 </div>
 
             </div>

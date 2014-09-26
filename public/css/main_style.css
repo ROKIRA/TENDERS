@@ -26,6 +26,7 @@ h2{
 .row .header{
     height: 300px;
     padding-top: 10px;
+    background: #2b37be;
 }
 
 .header .col-lg-1 img{
