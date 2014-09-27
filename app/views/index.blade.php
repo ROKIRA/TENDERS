@@ -1,4 +1,11 @@
 @extends('layouts.default')
+
+    @section('leftbar')
+        <section class="project_sort">
+
+        </section>
+    @stop
+
     @section('content')
         <section id="content" style="width: 1000px; margin:0 auto">
             <h1>TENDERS HOMEPAGE</h1>
