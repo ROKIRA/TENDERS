@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-lg-12 header">
                 <div class="col-lg-1">
-                    <a href="#"><img src="images/logo.jpg" alt="Логотип"/></a>
+                    <a href="#"><img src="images/logo.png" alt="Логотип"/></a>
                 </div>
 
                     <div class="col-lg-11">
