@@ -10,7 +10,7 @@ class HomeController extends BaseController {
 
 
 
-    /* GET ALL PROJECTS */
+    /**** GET ALL PROJECTS ****/
     public function index()
     {
 
@@ -26,7 +26,7 @@ class HomeController extends BaseController {
         return View::make('index')->with(array('projects' => $projects, 'projects_count' => $projects_count, 'lang' => $lang ));
     }
 
-
+    /**** GET ONE PROJECT ****/
     public function getProject($alias){
         $lang = Cookie::get('lang', 'ru');
 
@@ -36,19 +36,27 @@ class HomeController extends BaseController {
     }
 
 
-    public function getMoreProjects(){
+    /****  DOWNLOAD MORE PROJECTS AJAX ******/
+    public function postMoreProjects(){
         $lang = Cookie::get('lang', 'ru');
 
-        $load = base64_decode(Input::get('load'));
-        $count = base64_decode(Input::get('count'));
+        $load = Input::get('load');
+        $count = Input::get('count');
 
+        $sort = Input::get('sort');
+        if(!$sort){
+            $sort[0] = 'updated_at';
+            $sort[1] = 'ASC';
+        }else {
+            $sort = explode(',', $sort);
+        }
         if(($count-$load) >= 5) $take = 5;
             else $take = $count-$load;
         $left = (($count - $load - $take) >= 5) ? 5 : ($count - $load - $take);
 
         $projects = Project::
         select('project_id', 'project_alias', "project_keywords_$lang", "project_description_$lang", "project_name_$lang", "project_text_$lang", "project_image_preview", "project_date_start", "project_date_stop", "updated_at")
-            ->orderBy('updated_at', 'desc')
+            ->orderBy($sort[0], $sort[1])
             ->skip($load)
             ->take($take)
             ->get();
@@ -63,6 +71,36 @@ class HomeController extends BaseController {
             'left' => $left,
             'tpl' => $tpl,
         ));
+    }
+
+
+
+    /*******  SORT PROJECTS *********/
+    public function postProjectsSort($param){
+        $lang = Cookie::get('lang', 'ru');
+
+        $sort = Cookie::get("sort_$param", 'ASC');
+
+        $projects = Project::
+        select('project_id', 'project_alias', "project_keywords_$lang", "project_description_$lang", "project_name_$lang", "project_text_$lang", "project_image_preview", "project_date_start", "project_date_stop", "updated_at")
+            ->orderBy($param, $sort)
+            ->limit(3)
+            ->get();
+        $projects_count = Project::count();
+
+        if($sort == 'ASC') Cookie::queue("sort_$param", 'DESC');
+            else Cookie::queue("sort_$param", 'ASC');
+
+        $tpl = View::make('layouts.projects')->with(array('projects' => $projects, 'projects_count' =>$projects_count, 'lang' => $lang))->render();
+
+        return Response::json(array(
+            'success' => true,
+            'status' => 200,
+            'tpl' => $tpl,
+            'param'=>$param,
+            'sort'=>$sort,
+        ));
+
     }
 
 }

@@ -32,7 +32,7 @@ class ProjectsTableSeeder extends Seeder{
                 'project_image_preview' => "$j.jpg",
                 'project_link_to_site' => 'testlink.com',
                 'project_date_start' => '20.09.2014',
-                'project_date_stop' => '20.09.2014'
+                'project_date_stop' => '25.05.2015'
             );
             $projects[] = $testdata;
 

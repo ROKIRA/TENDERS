@@ -12,6 +12,7 @@ $(document).ready(function(){
         var url = _self.data('url');
         var load = _self.data('load');
         var count = _self.data('count');
+        var sort = _self.data('sort');
         var btn_text = _self.html();
 
         $.ajax({
@@ -19,7 +20,8 @@ $(document).ready(function(){
             url: url,
             data: {
                 load: load,
-                count: count
+                count: count,
+                sort: sort
             },
             beforeSend: function(){
                 _self.attr('disabled', 'disabled')
@@ -70,6 +72,39 @@ $(document).ready(function(){
                 scrollTop: 0
             }, delay);
         });
+
+
+    /****************************************
+     **********    SORT PROJECTS   ***********
+     ****************************************
+     */
+    $('#project_sort').on('click', 'a', function(e){
+        e.preventDefault();
+
+        var _self = $(this);
+        var url = _self.attr('href');
+        var sort = _self.data('sort');
+        var projects_block = $('#project_articles');
+
+        $.ajax({
+            type: 'post',
+            url: url,
+            data: {
+                sort: sort
+            },
+            success: function(response){
+                if(response.success && response.status == '200'){
+                    projects_block.empty();
+                    projects_block.append(response.tpl);
+                    $('#more_projects')
+                        .data('sort', response.param + ',' + response.sort).attr('data-sort', response.param + ',' + response.sort)
+                        .data('load', 3).attr('data-load', 3);
+                }
+            }
+        });
+
+    });
+
 
 
 }); // END READY

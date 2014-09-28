@@ -19,7 +19,13 @@
 
     Route::post('download/more/projects', [
         'as' => 'more_projects',
-        'uses' => 'HomeController@getMoreProjects'
+        'uses' => 'HomeController@postMoreProjects'
+    ]);
+
+
+    Route::post('projects/sort/by/{param}', [
+        'as' => 'projects_sort',
+        'uses' => 'HomeController@postProjectsSort'
     ]);
 
 

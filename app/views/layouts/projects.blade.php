@@ -37,5 +37,4 @@
                 </article>
                 @endforeach
             @endif
-            <section id="button_to_top" style="display: none; position: fixed; bottom: 75px; right: 50px; cursor: pointer; width: 60px; height: 20px; background: #40c3d9; opacity: 0.5;">НАВЕРХ</section>
         @endif
