@@ -17,7 +17,7 @@
 <body>
 
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 header">
                 <div class="col-lg-1">
@@ -32,7 +32,7 @@
                             <div class="col-lg-4">
                                 <address>Тел: +380-57-707-31-52 Тел: +380 50 50 555</address>
                             </div>
-                            <div class="col-lg-2">
+                            <div class="col-lg-3">
                                 <ul>
                                     <li class="lang"><a class="btn" href="#">рус</a></li>
                                     <li class="lang"><a class="btn" href="#">eng</a></li>
@@ -49,7 +49,16 @@
                 </div>
 
             </div>
+        </div><!--.row-->
+
+        <div class="row test">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+
+            </div>
+            <div class="col-lg-3"></div>
         </div>
+
     </div>
 
 </body>

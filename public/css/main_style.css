@@ -30,13 +30,13 @@ h2{
 
 /*--------------------------------mystyle*/
 .row .header{
-    height: 300px;
+    height: 150px;
     padding-top: 10px;
     background: #2b37be;
 }
 
 .header .col-lg-1 img{
-    width: 160px;
+    width: 115px;
 }
 .header .col-lg-6{
     padding: 0 0 0 20px;
@@ -44,28 +44,45 @@ h2{
 .header .col-lg-6 h1{
     color: #000080;
     font-style: italic;
+    font-size: 20px;
 }
-.header .col-lg-6 address{
-    font-size: 26px;
-    width: 300px;
-}
-.header .col-lg-4{
-    font-size: 24px;
-    width: 300px;
+
+.header .col-lg-4 address{
+    margin-top: 20px;
 }
 .header .col-lg-11{
     padding: 0 0 0 35px;
 }
-.header .col-lg-2 .btn{
+.header .col-lg-3 .btn{
     background: #417E9E;
 }
-.header .col-lg-2 .btn:hover{
+.header .col-lg-3 .btn:hover{
     background: #40c3d9;
 }
-.header .col-lg-2 a.btn{
+.header .col-lg-3 a.btn{
     color: #fff;
     display: inline-block;
+    border-radius: 0;
 }
-.header .col-lg-2 .lang{
+.header .col-lg-3 .lang{
     display: inline-block;
+}
+
+.test .col-lg-3{
+    height: 200px;
+    background: #000;
+}
+.test .col-lg-6{
+    height: 200px;
+    background: #ccc;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+    .header .col-lg-4{
+        font-size: 15px;
+        width: 220px;
+    }
 }
