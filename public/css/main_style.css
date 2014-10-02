@@ -1,6 +1,11 @@
+@font-face {
+    font-family: Helvetica; /* Имя шрифта */
+    src: url(../fonts/helvetica.ttf); /* Путь к файлу со шрифтом */
+}
 *{
     margin: 0;
     padding: 0;
+    font-family: Helvetica;
 }
 
 
@@ -17,11 +22,6 @@ article{
     color: #3b3b3a;
 }
 
-h1{
-    color: #d90004;
-    font-family: "Times New Roman";
-    text-align: center;
-}
 
 h2{
     color: #40c3d9;
@@ -29,14 +29,16 @@ h2{
 }
 
 /*--------------------------------mystyle*/
+/*--------------------------------.header*/
 .row .header{
-    height: 300px;
+    height: 170px;
     padding-top: 10px;
-    background: #2b37be;
+    outline: 1px solid #000080;
+    background: rgb(90, 192, 231) ;
 }
 
 .header .col-lg-1 img{
-    width: 160px;
+    width: 115px;
 }
 .header .col-lg-6{
     padding: 0 0 0 20px;
@@ -44,28 +46,101 @@ h2{
 .header .col-lg-6 h1{
     color: #000080;
     font-style: italic;
+    font-size: 23px;
+    margin: 10px 0 0 0;
+    text-align: center;
 }
-.header .col-lg-6 address{
-    font-size: 26px;
-    width: 300px;
-}
-.header .col-lg-4{
-    font-size: 24px;
-    width: 300px;
+
+.header .col-lg-4 address{
+    margin-top: 10px;
+    padding-left: 50px;
 }
 .header .col-lg-11{
     padding: 0 0 0 35px;
 }
-.header .col-lg-2 .btn{
-    background: #417E9E;
+/*-------------------------------переключятели языков*/
+.header .sprite-languages{
+    text-align: right;
+    width: 17%;
 }
-.header .col-lg-2 .btn:hover{
-    background: #40c3d9;
+.header .sprite-languages ul{
+    list-style: none;
+    margin-top: 10px;
 }
-.header .col-lg-2 a.btn{
-    color: #fff;
+.header .sprite-languages li{
+    list-style: none;
     display: inline-block;
 }
-.header .col-lg-2 .lang{
-    display: inline-block;
+.header .sprite-languages a:hover, .header .sprite-languages .active-lang{
+    opacity: 1;
+}
+.header .sprite-languages a{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    background: url("../images/sprite-languages.png");
+    width: 32px;
+    height: 32px;
+    display: block;
+    opacity: 0.6;
+
+    transition: ease all .4s;
+    -webkit-transition: ease all .4s;
+}
+.header .sprite-languages a.eng{
+    background-position: -32px 0;
+}
+.header .sprite-languages a.ru{
+    background-position: 32px 0;
+}
+/*--------------------------------переключятели языков*/
+
+/*--------------------------------переключятели языков*/
+.header .nav-pills{
+    margin-left: 26px;
+}
+.header .nav-pills li>a{
+    border-radius: 0;
+    margin-right: 18px;
+    padding: 11px 30px;
+
+    /*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+}
+.nav-pills > li.active > a{
+    background: rgb(180,131,255);
+}
+.nav-pills > li.active > a:hover{
+    background: rgb(126, 83, 197);
+}
+.nav-pills > li > a{
+    background: rgb(184,247,202);
+}
+.nav-pills > li > a:hover{
+    background: rgb(53,234,181);
+    box-shadow: 10px 7px 10px rgba(0,0,0,0.5);
+    transition: ease all .5s;
+    -webkit-transition: ease all .5s;
+}
+
+/*--------------------------------переключятели языков*/
+
+/*--------------------------------.header*/
+.test .col-lg-3{
+    height: 200px;
+    background: #000;
+}
+.test .col-lg-6{
+    height: 200px;
+    background: #ccc;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+    .header .col-lg-4{
+        font-size: 18px;
+        width: 300px;
+    }
 }

@@ -17,7 +17,7 @@
 <body>
 
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 header">
                 <div class="col-lg-1">
@@ -32,11 +32,11 @@
                             <div class="col-lg-4">
                                 <address>Тел: +380-57-707-31-52 Тел: +380 50 50 555</address>
                             </div>
-                            <div class="col-lg-2">
+                            <div class="col-lg-3 sprite-languages">
                                 <ul>
-                                    <li class="lang"><a class="btn" href="#">рус</a></li>
-                                    <li class="lang"><a class="btn" href="#">eng</a></li>
-                                    <li class="lang"><a class="btn" href="#">укр</a></li>
+                                    <li><a class="ua active-lang" href="#">укр</a></li>
+                                    <li><a class="eng" href="#">eng</a></li>
+                                    <li><a class="ru" href="#">рус</a></li>
                                 </ul>
                             </div>
                         </div><!-- .row -->
@@ -60,13 +60,25 @@
 
                         <ul class="nav nav-pills">
                             <li class="active"><a href="#">Главная</a></li>
-                            <li><a href="#">Профиль</a></li>
-                            <li><a href="#">Сообщение</a></li>
+                            <li><a href="#">Про нас</a></li>
+                            <li><a href="#">Проекты</a></li>
+                            <li><a href="#">Гранты</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Партнеры</a></li>
                         </ul>
                 </div>
 
             </div>
+        </div><!--.row-->
+
+        <div class="row test">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+
+            </div>
+            <div class="col-lg-3"></div>
         </div>
+
     </div>
 
 </body>
