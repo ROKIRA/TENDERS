@@ -82,23 +82,24 @@ $(document).ready(function(){
         e.preventDefault();
 
         var _self = $(this);
+        var _moreBtn = $('#more_projects');
         var url = _self.attr('href');
         var sort = _self.data('sort');
+        var load = _moreBtn.data('load');
         var projects_block = $('#project_articles');
 
         $.ajax({
             type: 'post',
             url: url,
             data: {
-                sort: sort
+                sort: sort,
+                load: load
             },
             success: function(response){
                 if(response.success && response.status == '200'){
                     projects_block.empty();
                     projects_block.append(response.tpl);
-                    $('#more_projects')
-                        .data('sort', response.param + ',' + response.sort).attr('data-sort', response.param + ',' + response.sort)
-                        .data('load', 3).attr('data-load', 3);
+                    _moreBtn.data('sort', response.param + ',' + response.sort).attr('data-sort', response.param + ',' + response.sort);
                 }
             }
         });

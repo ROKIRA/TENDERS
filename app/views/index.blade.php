@@ -10,17 +10,17 @@
                     <li><a href="#">.....</a></li>
                 </ul>
             @elseif($lang == 'en')
-                    <h3>(en)Сортировать по</h3>
+                    <h3>Sort by</h3>
                     <ul>
-                        <li><a href="#">Названию</a></li>
-                        <li><a href="#">Дате</a></li>
+                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', "project_name_$lang") }}">Name</a></li>
+                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', 'updated_at') }}">Date</a></li>
                         <li><a href="#">.....</a></li>
                     </ul>
             @elseif($lang == 'ua')
-                    <h3>(укр)Сортировать по</h3>
+                    <h3>Сортувати за</h3>
                     <ul>
-                        <li><a href="#">Названию</a></li>
-                        <li><a href="#">Дате</a></li>
+                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', "project_name_$lang") }}">Ім'ям</a></li>
+                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', 'updated_at') }}">Датою</a></li>
                         <li><a href="#">.....</a></li>
                     </ul>
             @endif

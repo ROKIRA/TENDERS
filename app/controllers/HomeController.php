@@ -61,7 +61,7 @@ class HomeController extends BaseController {
             ->take($take)
             ->get();
 
-        $loaded = base64_encode((int)$load + (int)$take);
+        $loaded = (int)$load + (int)$take;
         $tpl = View::make('layouts.projects')->with(array('projects' => $projects, 'projects_count' =>$count, 'lang' => $lang))->render();
 
         return Response::json(array(
@@ -80,11 +80,12 @@ class HomeController extends BaseController {
         $lang = Cookie::get('lang', 'ru');
 
         $sort = Cookie::get("sort_$param", 'ASC');
+        $load = Input::get('load');
 
         $projects = Project::
         select('project_id', 'project_alias', "project_keywords_$lang", "project_description_$lang", "project_name_$lang", "project_text_$lang", "project_image_preview", "project_date_start", "project_date_stop", "updated_at")
             ->orderBy($param, $sort)
-            ->limit(3)
+            ->limit($load)
             ->get();
         $projects_count = Project::count();
 
