@@ -9,12 +9,6 @@
 }
 
 
-body{
-    /*width: 1000px;*/
-    /*margin: 20px auto;*/
-    font-family: Arial, Helvetica, Tahoma, Verdana, Sans-Serif;
-}
-
 article{
     padding: 10px;
     text-align: justify;
@@ -33,7 +27,6 @@ h2{
 .row .header{
     height: 170px;
     padding-top: 10px;
-    outline: 1px solid #000080;
     background: rgb(90, 192, 231) ;
 }
 
@@ -50,15 +43,18 @@ h2{
     margin: 10px 0 0 0;
     text-align: center;
 }
+.header .col-lg-6 h1 strong{
+    display: block;
+}
 
 .header .col-lg-4 address{
     margin-top: 10px;
-    padding-left: 50px;
+    padding-left: 52px;
 }
 .header .col-lg-11{
     padding: 0 0 0 35px;
 }
-/*-------------------------------переключятели языков*/
+/*-------------------------------perekluchatel yazikov*/
 .header .sprite-languages{
     text-align: right;
     width: 17%;
@@ -83,10 +79,10 @@ h2{
     width: 32px;
     height: 32px;
     display: block;
-    opacity: 0.6;
+    opacity: 0.3;
 
-    transition: ease all .4s;
-    -webkit-transition: ease all .4s;
+    transition: ease all .5s;
+    -webkit-transition: ease all .5s;
 }
 .header .sprite-languages a.eng{
     background-position: -32px 0;
@@ -94,9 +90,9 @@ h2{
 .header .sprite-languages a.ru{
     background-position: 32px 0;
 }
-/*--------------------------------переключятели языков*/
+/*--------------------------------perekluchatel yazikov*/
 
-/*--------------------------------переключятели языков*/
+/*--------------------------------navigation*/
 .header .nav-pills{
     margin-left: 26px;
 }
@@ -104,8 +100,10 @@ h2{
     border-radius: 0;
     margin-right: 18px;
     padding: 11px 30px;
-
-    /*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+    transition: ease all .5s;
+    -webkit-transition: ease all .5s;
+    -moz-transition: ease all .5s;
+    -o-transition: ease all .5s;
 }
 .nav-pills > li.active > a{
     background: rgb(180,131,255);
@@ -115,22 +113,105 @@ h2{
 }
 .nav-pills > li > a{
     background: rgb(184,247,202);
+    color: #000;
+    text-transform: uppercase;
 }
 .nav-pills > li > a:hover{
     background: rgb(53,234,181);
     box-shadow: 10px 7px 10px rgba(0,0,0,0.5);
     transition: ease all .5s;
     -webkit-transition: ease all .5s;
+    -moz-transition: ease all .5s;
+    -o-transition: ease all .5s;
 }
 
-/*--------------------------------переключятели языков*/
-
+/*--------------------------------navigation*/
 /*--------------------------------.header*/
-.test .col-lg-3{
-    height: 200px;
+
+/*--------------------------------news*/
+.center .panel{
+    margin-top: 20px;
+    border-radius: 0;
+    border: none;
+    background: rgb(229, 232, 252);
+}
+.center .panel .panel-heading{
+    background: rgb(85,118,252) ;
+    border-radius: 0;
+}
+.center .panel .panel-heading h3{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+.center .panel .panel-body{
+    padding: 0;
+}
+.center .panel .panel-body ul{
+    list-style: none;
+}
+.center .panel .panel-body ul li{
+    list-style: none;
+}
+.center .panel .panel-body ul li a{
+    color: #000;
+    font-size: 16px;
+    display: block;
+    padding: 5px 15px 0;
+    margin: -1px 0 0 0;
+    transition: ease all .3s;
+    -webkit-transition: ease all .3s;
+    -moz-transition: ease all .3s;
+    -o-transition: ease all .3s;
+}
+.center .panel .panel-body ul li a:after{
+    content: '';
+    border-bottom: 1px solid rgb(175,191,255);
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 1px;
+    padding-top: 5px;
+}
+.center .panel .panel-body ul li:last-child a:after{
+    border: none;
+}
+.center .panel .panel-body ul li a:hover{
+    text-decoration: none;
+    background: rgb(174, 190, 254);
+    transition: ease all .3s;
+    -webkit-transition: ease all .3s;
+    -moz-transition: ease all .3s;
+    -o-transition: ease all .3s;
+}
+.center .panel-body> a{
+    display: block;
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    transition: ease box-shadow .3s;
+    -webkit-transition: ease box-shadow .3s;
+    -moz-transition: ease box-shadow .3s;
+    -o-transition: ease box-shadow .3s;
+    background: rgb(85, 118, 252);
+    border: none;
+}
+.center .panel-body> a:hover{
+    box-shadow: 8px 9px 8px rgba(0,0,0,0.5);
+    transition: ease box-shadow .3s;
+    -webkit-transition: ease box-shadow .3s;
+    -moz-transition: ease box-shadow .3s;
+    -o-transition: ease box-shadow .3s;
+    background: rgb(78,107,239);
+}
+/*--------------------------------news*/
+
+.center .col-lg-3{
+    height: 300px;
     background: #000;
 }
-.test .col-lg-6{
+.center .col-lg-6{
     height: 200px;
     background: #ccc;
 }
