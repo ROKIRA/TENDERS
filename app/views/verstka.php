@@ -41,7 +41,6 @@
                             </div>
                         </div><!-- .row -->
 
-
                         <ul class="nav nav-pills">
                             <li class="active"><a href="#">Главная</a></li>
                             <li><a href="#">Про нас</a></li>

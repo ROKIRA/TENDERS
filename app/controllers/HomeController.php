@@ -9,7 +9,6 @@ App::error(function (ModelNotFoundException $e) {
 class HomeController extends BaseController {
 
 
-
     /**** GET ALL PROJECTS ****/
     public function index()
     {
