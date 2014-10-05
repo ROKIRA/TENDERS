@@ -109,7 +109,6 @@ $(document).ready(function(){
     /********************************************
      ************ DATE PICKER ******************
      ******************************************/
-    $('#datePicker').pickmeup_twitter_bootstrap();
-    alert('хуй');
+
 
 }); // END READY

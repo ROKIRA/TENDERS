@@ -12,7 +12,6 @@ class HomeController extends BaseController {
     /**** GET ALL PROJECTS ****/
     public function index()
     {
-
         $lang = Cookie::get('lang', 'ru');
 
         $projects = Project::
@@ -22,7 +21,13 @@ class HomeController extends BaseController {
             ->get();
         $projects_count = Project::count();
 
-        return View::make('index')->with(array('projects' => $projects, 'projects_count' => $projects_count, 'lang' => $lang ));
+        $news = News::
+            select('news_id', 'news_alias', "news_title_$lang", "updated_at")
+            ->orderBy('updated_at', 'DESC')
+            ->limit(5)
+            ->get();
+
+        return View::make('index')->with(array('projects' => $projects, 'projects_count' => $projects_count, 'news' => $news, 'lang' => $lang ));
     }
 
     /**** GET ONE PROJECT ****/

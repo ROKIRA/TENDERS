@@ -5,13 +5,13 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateNews extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
         Schema::create('news', function($table) {
             $table->increments('news_id');
             $table->string('news_alias', 255);
@@ -30,16 +30,16 @@ class CreateNews extends Migration {
             $table->string('news_images', 255);
             $table->timestamps();
         });
-	}
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
         Schema::drop('news');
-	}
+    }
 
 }

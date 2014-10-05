@@ -70,3 +70,26 @@
 
         <section id="button_to_top" style="display: none; position: fixed; bottom: 75px; right: 50px; cursor: pointer; width: 60px; height: 20px; background: #40c3d9; opacity: 0.5;">НАВЕРХ</section>
     @stop
+
+
+    @section('rightbar')
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Новости</h3></div>
+                <div class="panel-body">
+                    @if($lang == 'ru')
+                        @if(count($news) != 0)
+                            <ul>
+                                @foreach($news as $n)
+                                    <li><a href="#">{{$n->news_title_ru}}</a></li>
+                                @endforeach
+                            </ul>
+                            <a href="#" class="btn btn-primary">Все новости</a>
+                        @else
+                            <p class="notice">Новостей пока нет</p>
+                        @endif
+                    @endif
+                </div>
+            </div>
+        </div>
+    @stop
