@@ -22,6 +22,7 @@
                     <p>{{ Str::limit($project->project_text_en, 500) }}</p>
                     <a href='{{URL::to('project', $project->project_alias)}}'>Read more...</a>
                 </article>
+                <section style="clear: both"></section>
                 @endforeach
 
             @elseif($lang == 'ua')
@@ -35,6 +36,7 @@
 
                     <a href='{{URL::to('project', $project->project_alias)}}'>Читати далi...</a>
                 </article>
+                <section style="clear: both"></section>
                 @endforeach
             @endif
         @endif
