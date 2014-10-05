@@ -6,7 +6,7 @@
                         <img style="display: block; margin: 0 auto; max-width: 200px; max-height: 200px" src="/uploads/test/{{ $project->project_image_preview }}" alt=""/>
                     </figure>
                     <h2 style="margin:0 0 10px">{{ $project->project_name_ru}}</h2>
-                    <p>{{ Str::limit($project->project_text_ru, 500) }}</p>
+                    <p>{{ Str::limit($project->project_text_ru, 300) }}</p>
                     <a href='{{URL::to('project', $project->project_alias)}}'>Читать далее...</a>
                 </article>
                 <section style="clear: both"></section>
@@ -19,7 +19,7 @@
                         <img style="display: block; margin: 0 auto; max-width: 200px; max-height: 200px" src="/uploads/test/{{ $project->project_image_preview }}" alt=""/>
                     </figure>
                     <h2 style="margin:0 0 10px">{{ $project->project_name_en}}</h2>
-                    <p>{{ Str::limit($project->project_text_en, 500) }}</p>
+                    <p>{{ Str::limit($project->project_text_en, 300) }}</p>
                     <a href='{{URL::to('project', $project->project_alias)}}'>Read more...</a>
                 </article>
                 @endforeach
@@ -31,7 +31,7 @@
                         <img style="display: block; margin: 0 auto; max-width: 200px; max-height: 200px" src="/uploads/test/{{ $project->project_image_preview }}" alt=""/>
                     </figure>
                     <h2 style="margin:0 0 10px">{{ $project->project_name_ua}}</h2>
-                    <p>{{ Str::limit($project->project_text_ua, 500) }}</p>
+                    <p>{{ Str::limit($project->project_text_ua, 300) }}</p>
 
                     <a href='{{URL::to('project', $project->project_alias)}}'>Читати далi...</a>
                 </article>

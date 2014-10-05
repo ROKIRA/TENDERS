@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -18,7 +18,7 @@
 
 
     <div class="container">
-        <div class="row">
+        <header class="row">
             <div class="col-lg-12 header">
                 <div class="col-lg-1">
                     <a href="#"><img src="images/logo.png" alt="Логотип"/></a>
@@ -27,7 +27,7 @@
                     <div class="col-lg-11">
                         <div class="row">
                             <div class="col-lg-6">
-                                <h1><strong>Центре развития регионов</strong> Харьковском национальном университете городского хозяйства имени О.М Бекетова</h1>
+                                <h1><strong>Центре развития регионов</strong> Харьковский национий университет городского хозяйства имени О.М&nbspБекетова</h1>
                             </div>
                             <div class="col-lg-4">
                                 <address>Тел: +380-57-707-31-52 e-mail: region.dc@ukr.net</address>
@@ -52,11 +52,49 @@
                 </div>
 
             </div>
-        </div><!--.row-->
+        </header><!--.row-->
 
-        <div class="row center">
+        <section class="row center">
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
+                <div class="row">
+
+                    <div class="thumbnail">
+                        <article class="loaded">
+                            <h2>Название 1</h2>
+                            <figure>
+                                <img src="/uploads/test/1.jpg" alt="">
+                            </figure>
+                            <p>Текст 1. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликац...</p>
+                            <a href="http://tender.loc/project/project_name_1" class="btn btn-primary clearfix">Читать далее...</a>
+                        </article>
+                        <section class="clearfix"></section>
+                    </div>
+
+                    <div class="thumbnail">
+                        <article class="loaded">
+                            <h2>Название 1</h2>
+                            <figure>
+                                <img src="/uploads/test/1.jpg" alt="">
+                            </figure>
+                            <p>Текст 1. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликац...</p>
+                            <a href="http://tender.loc/project/project_name_1" class="btn btn-primary clearfix">Читать далее...</a>
+                        </article>
+                        <section class="clearfix"></section>
+                    </div>
+                    <div class="thumbnail">
+                        <article class="loaded">
+                            <h2>Название 1</h2>
+                            <figure>
+                                <img src="/uploads/test/1.jpg" alt="">
+                            </figure>
+                            <p>Текст 1. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликац...</p>
+                            <a href="http://tender.loc/project/project_name_1" class="btn btn-primary clearfix">Читать далее...</a>
+                        </article>
+                        <section class="clearfix"></section>
+                    </div>
+
+                </div>
             </div>
             <div class="col-lg-3">
                 <div class="panel panel-default">
@@ -73,7 +111,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section><!--.center-->
+
+        <div class="row">
+            <div class="col-lg-12 footer">
+                <div class="col-lg-5"><img src="images/chetchik.jpg" width="60" alt=""/></div>
+                <div class="col-lg-4 col-lg-offset-3">сайт сделан: Царёв К.В., Игошин Р.А.</div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>2014 Центре развития регионов</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--.row-->
 
     </div>
 
