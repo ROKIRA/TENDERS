@@ -15,7 +15,7 @@ class NewsTableSeeder extends Seeder{
         $j=1;
         for($i=1; $i<=50; $i++){
             $testdata = array(
-                'news_alias' => "project_name_$i",
+                'news_alias' => "news_title_$i",
                 'news_keywords_ru' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tellus at velit pretium tincidunt.',
                 'news_keywords_en' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tellus at velit pretium tincidunt.',
                 'news_keywords_ua' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tellus at velit pretium tincidunt.',
