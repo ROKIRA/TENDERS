@@ -13,5 +13,8 @@
             @yield('rightbar')
         </section>
 
+    <section id="button_to_top">
+        <img src="images/btn-top.png" alt="Наверх"/>
+    </section>
     </section><!--.center-->
 @include('layouts.footer')
