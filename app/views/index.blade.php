@@ -1,46 +1,42 @@
 @extends('layouts.default')
 
     @section('leftbar')
-        <section class="project_sort" id="project_sort">
+        <section class="project_sort panel panel-default" id="project_sort">
             @if($lang == 'ru')
-                <h3>Сортировать по</h3>
-                <ul>
-                    <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', "project_name_$lang") }}">Названию</a></li>
-                    <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', 'updated_at') }}">Дате</a></li>
-                    <li><a href="#">.....</a></li>
-                </ul>
+                <div class="panel-heading"><h3>Виды сортировок</h3></div>
+                <div class="panel-body">
+                    <ul>
+                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', "project_name_$lang") }}">Названию</a></li>
+                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', 'updated_at') }}">Дате</a></li>
+                        <li><a href="#">.....</a></li>
+                    </ul>
+                </div>
             @elseif($lang == 'en')
-                    <h3>Sort by</h3>
-                    <ul>
-                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', "project_name_$lang") }}">Name</a></li>
-                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', 'updated_at') }}">Date</a></li>
-                        <li><a href="#">.....</a></li>
-                    </ul>
+                    <div class="panel-heading"><h3>Sort by</h3></div>
+                    <div class="panel-body">
+                        <ul>
+                            <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', "project_name_$lang") }}">Name</a></li>
+                            <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', 'updated_at') }}">Date</a></li>
+                            <li><a href="#">.....</a></li>
+                        </ul>
+                    </div>
             @elseif($lang == 'ua')
-                    <h3>Сортувати за</h3>
-                    <ul>
-                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', "project_name_$lang") }}">Ім'ям</a></li>
-                        <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', 'updated_at') }}">Датою</a></li>
-                        <li><a href="#">.....</a></li>
-                    </ul>
+                    <div class="panel-heading"><h3>Сортувати за</h3></div>
+                    <div class="panel-body">
+                        <ul>
+                            <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', "project_name_$lang") }}">Ім'ям</a></li>
+                            <li ><a data-sort="DESC" href="{{ URL::to('projects/sort/by', 'updated_at') }}">Датою</a></li>
+                            <li><a href="#">.....</a></li>
+                        </ul>
+                    </div>
             @endif
         </section>
-
-
-
     @stop
 
+
     @section('content')
-
-            <section class="calendar">
-                <div id="datePicker"></div>
-            </section>
-
-        <section id="content" style="width: 1000px; margin:0 auto">
-            <h1>TENDERS HOMEPAGE</h1>
-
-            <div id="projects">
-                <div class="project_articles" id="project_articles">
+            <div id="projects" class="row">
+                <div id="project_articles">
                     @include('layouts.projects')
                 </div>
 
@@ -65,31 +61,54 @@
                 @endif
             </div>
 
-
-        </section>
-
-        <section id="button_to_top" style="display: none; position: fixed; bottom: 75px; right: 50px; cursor: pointer; width: 60px; height: 20px; background: #40c3d9; opacity: 0.5;">НАВЕРХ</section>
+            <section id="button_to_top" style="display: none; position: fixed; bottom: 75px; right: 50px; cursor: pointer; width: 60px; height: 20px; background: #40c3d9; opacity: 0.5;">НАВЕРХ</section>
     @stop
 
 
     @section('rightbar')
-        <div class="col-lg-3">
-            <div class="panel panel-default">
+        <div class="panel panel-default">
+            @if($lang == 'ru')
                 <div class="panel-heading"><h3>Новости</h3></div>
                 <div class="panel-body">
-                    @if($lang == 'ru')
-                        @if(count($news) != 0)
-                            <ul>
-                                @foreach($news as $n)
-                                    <li><a href="#">{{$n->news_title_ru}}</a></li>
-                                @endforeach
-                            </ul>
-                            <a href="#" class="btn btn-primary">Все новости</a>
-                        @else
-                            <p class="notice">Новостей пока нет</p>
-                        @endif
+                    @if(count($news) != 0)
+                        <ul>
+                            @foreach($news as $n)
+                                <li><a href="#">{{$n->news_title_ru}}</a></li>
+                            @endforeach
+                        </ul>
+                        <a href="#" class="btn btn-primary">Все новости</a>
+                    @else
+                        <p class="notice">Новостей пока нет</p>
                     @endif
                 </div>
-            </div>
+            @elseif($lang == 'en')
+                <div class="panel-heading"><h3>News</h3></div>
+                <div class="panel-body">
+                    @if(count($news) != 0)
+                        <ul>
+                            @foreach($news as $n)
+                                <li><a href="#">{{$n->news_title_en}}</a></li>
+                            @endforeach
+                        </ul>
+                        <a href="#" class="btn btn-primary">All news</a>
+                    @else
+                        <p class="notice">No news yet...</p>
+                    @endif
+                </div>
+            @elseif($lang == 'ua')
+                <div class="panel-heading"><h3>Новини</h3></div>
+                <div class="panel-body">
+                    @if(count($news) != 0)
+                        <ul>
+                            @foreach($news as $n)
+                                <li><a href="#">{{$n->news_title_ua}}</a></li>
+                            @endforeach
+                        </ul>
+                        <a href="#" class="btn btn-primary">Усі новини</a>
+                    @else
+                        <p class="notice">Новин поки що немає</p>
+                    @endif
+                </div>
+            @endif
         </div>
     @stop

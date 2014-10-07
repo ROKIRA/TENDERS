@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link media="all" type="text/css" rel="stylesheet" href="css/reset.css">
+
     <link media="all" type="text/css" rel="stylesheet" href="css/bootstrap.css">
 
     <link media="all" type="text/css" rel="stylesheet" href="css/bootstrap-theme.css">
@@ -41,14 +43,16 @@
                             </div>
                         </div><!-- .row -->
 
-                        <ul class="nav nav-pills">
-                            <li class="active"><a href="#">Главная</a></li>
-                            <li><a href="#">Про нас</a></li>
-                            <li><a href="#">Проекты</a></li>
-                            <li><a href="#">Гранты</a></li>
-                            <li><a href="#">Новости</a></li>
-                            <li><a href="#">Партнеры</a></li>
-                        </ul>
+                        <nav>
+                            <ul class="nav nav-pills">
+                                <li class="active"><a href="#">Главная</a></li>
+                                <li><a href="#">Про нас</a></li>
+                                <li><a href="#">Проекты</a></li>
+                                <li><a href="#">Гранты</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Партнеры</a></li>
+                            </ul>
+                        </nav>
                 </div>
 
             </div>
