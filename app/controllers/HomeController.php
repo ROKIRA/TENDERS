@@ -14,6 +14,8 @@ class HomeController extends BaseController {
     {
         $lang = Cookie::get('lang', 'ru');
 
+        Cookie::queue('page', 'home', 60*24*180);
+
         $projects = Project::
               select('project_id', 'project_alias', "project_keywords_$lang", "project_description_$lang", "project_name_$lang", "project_text_$lang", "project_image_preview", "project_date_start", "project_date_stop", "updated_at")
             ->orderBy('updated_at', 'desc')

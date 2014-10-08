@@ -59,15 +59,13 @@ $(document).ready(function(){
     *********    BUTTON TO TOP   ***********
     ****************************************
     */
-    var top_show = 150; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
-    var delay = 1000; // Задержка прокрутки
-        $(window).scroll(function () { // При прокрутке попадаем в эту функцию
-            /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
+    var top_show = 500;
+    var delay = 1000;
+        $(window).scroll(function () {
             if ($(this).scrollTop() > top_show) $('#button_to_top').fadeIn();
             else $('#button_to_top').fadeOut();
         });
-        $('#button_to_top').click(function () { // При клике по кнопке "Наверх" попадаем в эту функцию
-            /* Плавная прокрутка наверх */
+        $('#button_to_top').click(function () {
             $('body, html').animate({
                 scrollTop: 0
             }, delay);
@@ -86,7 +84,7 @@ $(document).ready(function(){
         var url = _self.attr('href');
         var sort = _self.data('sort');
         var load = _moreBtn.data('load');
-        var projects_block = $('#project_articles');
+        var _projects_block = $('#project_articles');
 
         $.ajax({
             type: 'post',
@@ -97,8 +95,8 @@ $(document).ready(function(){
             },
             success: function(response){
                 if(response.success && response.status == '200'){
-                    projects_block.empty();
-                    projects_block.append(response.tpl);
+                    _projects_block.empty();
+                    _projects_block.append(response.tpl);
                     _moreBtn.data('sort', response.param + ',' + response.sort).attr('data-sort', response.param + ',' + response.sort);
                 }
             }
@@ -109,6 +107,10 @@ $(document).ready(function(){
     /********************************************
      ************ DATE PICKER ******************
      ******************************************/
-
+        $('#calendar').eventCalendar({
+            // link to events json
+            eventsjson: 'event.humanDate.json.php',
+            jsonDateFormat: 'human'
+        });
 
 }); // END READY

@@ -6,13 +6,14 @@
             {{ HTML::style('css/reset.css') }}
             {{ HTML::style('css/bootstrap.css') }}
             {{ HTML::style('css/bootstrap-theme.css') }}
-            {{ HTML::style('css/pickmeup.css') }}
+            {{ HTML::style('css/eventCalendar.css') }}
+            {{ HTML::style('css/eventCalendar_theme_responsive.css') }}
             {{ HTML::style('css/main_style.css') }}
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="http://tenders.loc/js/jquery-1.11.1.min.js">\x3C/script>')</script>
             {{ HTML::script('js/jquery.cookie.js') }}
             {{ HTML::script('js/bootstrap.min.js') }}
-            {{ HTML::script('js/jquery.pickmeup.js') }}
+            {{ HTML::script('js/jquery.eventCalendar.js') }}
             {{ HTML::script('js/main_script.js') }}
 
 
@@ -48,21 +49,21 @@
                                             @if($lang == 'ru')
                                                 <li><a href="/">Главная</a></li>
                                                 <li><a href="#">Про нас</a></li>
-                                                <li><a class="active" href="#">Проекты</a></li>
+                                                <li @if(Cookie::get('page')=='home') class="active" @endif ><a href="#">Проекты</a></li>
                                                 <li><a href="#">Гранты</a></li>
                                                 <li><a href="#">Новости</a></li>
                                                 <li><a href="#">Партнеры</a></li>
                                             @elseif($lang == 'en')
                                                 <li><a href="/">Home</a></li>
                                                 <li><a href="#">About us</a></li>
-                                                <li><a class="active" href="#">Projects</a></li>
+                                                <li ><a href="#">Projects</a></li>
                                                 <li><a href="#">Grants</a></li>
                                                 <li><a href="#">News</a></li>
                                                 <li><a href="#">Partners</a></li>
                                             @elseif($lang == 'ua')
                                                 <li><a href="/">Головна</a></li>
                                                 <li><a href="#">Про нас</a></li>
-                                                <li><a class="active" href="#">Проекти</a></li>
+                                                <li @if(Cookie::get('page')=='home') class="active" @endif><a href="#">Проекти</a></li>
                                                 <li><a href="#">Гранти</a></li>
                                                 <li><a href="#">Новини</a></li>
                                                 <li><a href="#">Партнери</a></li>

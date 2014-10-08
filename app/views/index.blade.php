@@ -31,6 +31,10 @@
                     </div>
             @endif
         </section>
+
+        <section id="calendar">
+
+        </section>
     @stop
 
 

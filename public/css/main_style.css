@@ -292,6 +292,7 @@
     -o-transition: ease all .5s;    
 }
 .center #button_to_top{
+    display: none;
     position: fixed;
     bottom: 125px;
     left: 50px;
