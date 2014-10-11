@@ -107,10 +107,7 @@ $(document).ready(function(){
     /********************************************
      ************ DATE PICKER ******************
      ******************************************/
-        $('#calendar').eventCalendar({
-            // link to events json
-            eventsjson: 'event.humanDate.json.php',
-            jsonDateFormat: 'human'
-        });
+        /*$('#calendar').eventCalendar({
+        });*/
 
 }); // END READY

@@ -28,6 +28,14 @@
         'uses' => 'HomeController@postProjectsSort'
     ]);
 
+    Route::get('about_us', [
+        'as' => 'about_us',
+        'uses' => 'AboutUsController@index'
+    ]);
+
+
+
+/************************** TO DELETE ****************************************/
 
     Route::any('hello', function()
     {
@@ -38,6 +46,9 @@
     {
         return View::make('verstka');
     });
+
+/************************* TO DELETE ****************************************/
+
 
 
     App::missing(function ($exception) {

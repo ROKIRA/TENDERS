@@ -27,4 +27,3 @@ $i = 1;
     $separator = ",";
 
 echo ']';
-?>

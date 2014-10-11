@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Роман
- * Date: 20.09.14
- * Time: 0:28
- */
 
 class NewsTableSeeder extends Seeder{
 
