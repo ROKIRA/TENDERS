@@ -18,6 +18,8 @@
                             <img src="/uploads/test/{{ $leader->lead_photo }}" alt="{{ $leader->lead_fio_ru}}"/>
                         </figure>
                         <p>{{ Str::limit($leader->lead_text_ru) }}</p>
+                        <p><strong>E-mail:</strong> <a href="#">{{ Str::limit($leader->lead_email) }}</a></p>
+                        <p><strong>Телефон:</strong> {{ Str::limit($leader->lead_phone) }}</p>
                     </article>
                     <section class="clearfix"></section>
                 </div>
@@ -33,6 +35,8 @@
                             <img src="/uploads/test/{{ $leader->lead_photo }}" alt="{{ $leader->lead_fio_en}}"/>
                         </figure>
                         <p>{{ Str::limit($leader->lead_text_en) }}</p>
+                        <p><strong>E-mail:</strong> <a href="#">{{ Str::limit($leader->lead_email) }}</a></p>
+                        <p><strong>Phone:</strong> {{ Str::limit($leader->lead_phone) }}</p>
                     </article>
                     <section class="clearfix"></section>
                 </div>
@@ -48,6 +52,8 @@
                             <img src="/uploads/test/{{ $leader->lead_photo }}" alt="{{ $leader->lead_fio_ua}}"/>
                         </figure>
                         <p>{{ Str::limit($leader->lead_text_ua) }}</p>
+                        <p><strong>E-mail:</strong> <a href="#">{{ Str::limit($leader->lead_email) }}</a></p>
+                        <p><strong>Телефон:</strong> {{ Str::limit($leader->lead_phone) }}</p>
                     </article>
                     <section class="clearfix"></section>
                 </div>
