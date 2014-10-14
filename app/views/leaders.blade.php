@@ -10,13 +10,14 @@
         <section id="leadership">
             @if($lang == 'ru')
                 @foreach($leaders as $leader)
-                <div class="thumbnail">
+                <div class="thumbnail about_us">
                     <article class="loaded">
-                        <h2>{{ $leader->lead_post_ru}}</h2>
-                        <h3>{{ $leader->lead_fio_ru}}</h3>
                         <figure>
                             <img src="/uploads/test/{{ $leader->lead_photo }}" alt="{{ $leader->lead_fio_ru}}"/>
                         </figure>
+                        <h2>{{ $leader->lead_post_ru}}</h2>
+                        <h3>{{ $leader->lead_fio_ru}}</h3>
+
                         <p>{{ Str::limit($leader->lead_text_ru) }}</p>
                         <p><strong>E-mail:</strong> <a href="#">{{ Str::limit($leader->lead_email) }}</a></p>
                         <p><strong>Телефон:</strong> {{ Str::limit($leader->lead_phone) }}</p>
@@ -27,7 +28,7 @@
 
             @elseif($lang == 'en')
                 @foreach($leaders as $leader)
-                <div class="thumbnail">
+                <div class="thumbnail about_us">
                     <article class="loaded">
                         <h2>{{ $leader->lead_post_en}}</h2>
                         <h3>{{ $leader->lead_fio_en}}</h3>
@@ -44,7 +45,7 @@
 
             @elseif($lang == 'ua')
                 @foreach($leaders as $leader)
-                <div class="thumbnail">
+                <div class="thumbnail about_us">
                     <article class="loaded">
                         <h2>{{ $leader->lead_post_ua}}</h2>
                         <h3>{{ $leader->lead_fio_ua}}</h3>

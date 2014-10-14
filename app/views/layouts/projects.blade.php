@@ -1,7 +1,7 @@
         @if($projects_count != 0)
             @if($lang == 'ru')
                 @foreach($projects as $project)
-                <div class="thumbnail">
+                <div class="thumbnail projects">
                     <article class="loaded">
                         <h2><a href="{{URL::to('project', $project->project_alias)}}">{{ $project->project_name_ru}}</a></h2>
                         <figure>
@@ -16,7 +16,7 @@
 
             @elseif($lang == 'en')
                 @foreach($projects as $project)
-                <div class="thumbnail">
+                <div class="thumbnail projects">
                     <article class="loaded">
                         <h2><a href="{{URL::to('project', $project->project_alias)}}">{{ $project->project_name_en}}</a></h2>
                         <figure>
@@ -31,7 +31,7 @@
 
             @elseif($lang == 'ua')
                 @foreach($projects as $project)
-                <div class="thumbnail">
+                <div class="thumbnail projects">
                     <article class="loaded">
                         <h2><a href="{{URL::to('project', $project->project_alias)}}">{{ $project->project_name_ua}}</a></h2>
                         <figure>

@@ -7,7 +7,17 @@
     padding: 0;
     font-family: Helvetica;
 }
-
+body{
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…BoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(89,190,229,0.4) 99%, rgba(90,192,231,0.4) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(99%,rgba(89,190,229,0.4)), color-stop(100%,rgba(90,192,231,0.4)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(89,190,229,0.4) 99%,rgba(90,192,231,0.4) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(89,190,229,0.4) 99%,rgba(90,192,231,0.4) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(89,190,229,0.4) 99%,rgba(90,192,231,0.4) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(89,190,229,0.4) 99%,rgba(90,192,231,0.4) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#665ac0e7',GradientType=0 );
+    background-attachment: fixed;
+}
 
 /*--------------------------------mystyle*/
 /*--------------------------------.header*/
@@ -20,7 +30,7 @@
     padding-right: 0;
 }
 .header .col-lg-2 img{
-    width: 115px;
+    width: 135px;
 }
 .header .col-lg-6{
     padding: 0 0 0 20px;
@@ -118,6 +128,10 @@
     -moz-transition: ease all .5s;
     -o-transition: ease all .5s;
 }
+.nav-pills > li > a:active{
+    border: 0;
+    outline: 0;
+}
 
 /*--------------------------------navigation*/
 /*--------------------------------.header*/
@@ -202,10 +216,11 @@
 /*--------------------------------news*/
 
 /*--------------------------------center column*/
+/*--------------------------------center column - projects*/
 .center .col-lg-6{
     margin-top: 20px;
 }
-.center .thumbnail{
+.center .projects{
     margin: 0 0 20px 0;
     padding: 0;
     border: none;
@@ -213,37 +228,37 @@
     background: rgba(236, 233, 233, 1);
     border-radius: 0;
 }
-.center .thumbnail p{
+.center .projects p{
     padding-right: 20px;
 }
 .center .loaded{
     margin: 0;
     padding: 0;
 }
-.center .thumbnail figure{
+.center .projects figure{
     float: left;
     margin: 5px 15px;
     width: 200px;
     height: 150px;
 }
-.center .thumbnail figure img{
+.center .projects figure img{
     max-width: 200px;
     max-height: 150px;
 }
-.center .thumbnail h2{
+.center .projects h2{
     text-indent: 0;
     margin: 0 0 10px 0;
     padding: 10px;
     text-align: center;
     background: rgb(63, 81, 180);
 }
-.center .thumbnail h2 a{
+.center .projects h2 a{
     color: #fff;
 }
-.center .thumbnail h2 a:hover{
+.center .projects h2 a:hover{
     text-decoration: none;
 }
-.center .thumbnail a.btn{
+.center .projects a.btn{
     float: right;
     margin: 0 20px 20px 0;
     background: rgb(63, 81, 180);
@@ -256,7 +271,7 @@
     -moz-transition: ease box-shadow .3s;
     -o-transition: ease box-shadow .3s;
 }
-.center .thumbnail a.btn:hover{
+.center .projects a.btn:hover{
     background: rgb(56, 73, 171);
 
     box-shadow: 8px 8px 9px rgba(0,0,0,0.3);
@@ -265,6 +280,31 @@
     -moz-transition: ease box-shadow .3s;
     -o-transition: ease box-shadow .3s;
 }
+/*--------------------------------center column - about_us*/
+.center .about_us{
+    margin: 0 0 20px 0;
+    padding: 0;
+    border: none;
+    text-align: justify;
+    border-radius: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #000;
+}
+.center .about_us figure{
+    float: left;
+    margin: 5px 15px;
+    width: 200px;
+    height: 150px;
+}
+.center .about_us figure img{
+    max-width: 200px;
+    max-height: 150px;
+}
+.center .about_us h2{
+    text-align: center;
+}
+
+
 .center button{
     width: 29%;
     margin: 5px auto 10px;
